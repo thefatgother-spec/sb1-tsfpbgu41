@@ -10,7 +10,7 @@ const AboutPage = () => {
     },
     {
       icon: <Award className="w-8 h-8" />,
-      number: "15",
+      number: "57",
       label: "Yıl Deneyim"
     },
     {
