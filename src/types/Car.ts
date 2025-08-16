@@ -6,7 +6,7 @@ export interface Car {
   price: number;
   mileage: number;
   fuelType: 'Benzin' | 'Dizel' | 'Hibrit' | 'Elektrik';
-  transmission: 'Manuel' | 'Otomatik';
+  transmission: 'Manuel' | 'Yarı Otomatik' | 'Otomatik';
   color: string;
   description: string;
   images: string[];
@@ -22,7 +22,7 @@ export interface CarFormData {
   price: number;
   mileage: number;
   fuelType: 'Benzin' | 'Dizel' | 'Hibrit' | 'Elektrik';
-  transmission: 'Manuel' | 'Otomatik';
+  transmission: 'Manuel' | 'Yarı Otomatik' | 'Otomatik';
   color: string;
   description: string;
   images: string[];
