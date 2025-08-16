@@ -44,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
             {/* Logo */}
             <div className="flex items-center cursor-pointer" onClick={() => onPageChange('home')}>
               <img 
-              src="https://i.ibb.co/CK9XC13P/Screenshot-2.png?auto=compress&cs=tinysrgb&w=10&h=10&fit=crop"
+              src="https://i.ibb.co/CK9XC13P/Screenshot-2.png?auto=compress&cs=tinysrgb&w=50&h=50&fit=crop"
                 />
               <div className="bg-blue-600 text-white p-0 rounded-lg mr-3">
                 <Car className="w-0 h-0" />
