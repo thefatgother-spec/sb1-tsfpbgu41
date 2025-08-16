@@ -10,7 +10,7 @@ const HomePage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url("https://prnt.sc/Vl8vsSNikU77?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop")'
+            backgroundImage: 'url("https://images.pexels.com/photos/33465934/pexels-photo-33465934.png?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop")'
           }}
         ></div>
         
