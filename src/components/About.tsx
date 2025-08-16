@@ -10,7 +10,7 @@ const About = () => {
     },
     {
       icon: <Award className="w-8 h-8" />,
-      number: "25",
+      number: "57",
       label: "Yıl Deneyim"
     },
     {
@@ -35,7 +35,7 @@ const About = () => {
               Hakkımızda
             </h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              1998 yılından bu yana otomotiv sektöründe faaliyet gösteren AVSAR Otomotiv, 
+              1968 yılından bu yana otomotiv sektöründe faaliyet gösteren AVSAR Otomotiv, 
               müşteri memnuniyetini ön planda tutarak kaliteli hizmet anlayışıyla çalışmaktadır.
             </p>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
