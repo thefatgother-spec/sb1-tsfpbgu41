@@ -46,8 +46,8 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
               <img 
               src="https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop"
                 />
-              <div className="bg-blue-600 text-white p-2 rounded-lg mr-3">
-                < className="w-8 h-8" />
+              
+                <Car className="w-8 h-8" />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">AVSAR OTOMOTİV</h1>
