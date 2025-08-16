@@ -1,7 +1,28 @@
 import React from 'react';
-import { Car, Shield, Award, Users } from 'lucide-react';
+import { Car, Shield, Award, Users, ArrowRight } from 'lucide-react';
 
-const HomePage = () => {
+interface HomePageProps {
+  onPageChange?: (page: string) => void;
+  cars?: any[];
+}
+
+const HomePage: React.FC<HomePageProps> = ({ onPageChange, cars = [] }) => {
+  const formatPrice = (price: number) => {
+    return new Intl.NumberFormat('tr-TR', {
+      style: 'currency',
+      currency: 'TRY',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    }).format(price);
+  };
+
+  const formatMileage = (mileage: number) => {
+    return new Intl.NumberFormat('tr-TR').format(mileage) + ' km';
+  };
+
+  // Show only first 6 available cars
+  const featuredCars = cars.filter(car => car.isAvailable).slice(0, 6);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -26,10 +47,16 @@ const HomePage = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+              <button 
+                onClick={() => onPageChange?.('cars')}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+              >
                 Araçları İncele
               </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+              <button 
+                onClick={() => onPageChange?.('contact')}
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+              >
                 İletişime Geç
               </button>
             </div>
@@ -68,6 +95,80 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      {/* Featured Cars Section */}
+      {featuredCars.length > 0 && (
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Öne Çıkan Araçlar</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                En popüler ve kaliteli araç seçeneklerimizi keşfedin
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {featuredCars.map(car => (
+                <div 
+                  key={car.id}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer overflow-hidden"
+                  onClick={() => onPageChange?.('cars')}
+                >
+                  <div className="relative">
+                    <img 
+                      src={car.images[0] || 'https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=600'}
+                      alt={`${car.brand} ${car.model}`}
+                      className="w-full h-40 object-cover"
+                    />
+                    <div className="absolute top-3 right-3 bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                      {car.year}
+                    </div>
+                  </div>
+                  
+                  <div className="p-4">
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">
+                      {car.brand} {car.model}
+                    </h3>
+                    
+                    <div className="text-xl font-bold text-blue-600 mb-3">
+                      {formatPrice(car.price)}
+                    </div>
+                    
+                    <div className="grid grid-cols-2 gap-2 mb-3 text-xs text-gray-600">
+                      <div className="flex items-center space-x-1">
+                        <span>{formatMileage(car.mileage)}</span>
+                      </div>
+                      <div className="flex items-center space-x-1">
+                        <span>{car.fuelType}</span>
+                      </div>
+                      <div className="flex items-center space-x-1">
+                        <span>{car.transmission}</span>
+                      </div>
+                      <div className="flex items-center space-x-1">
+                        <span>{car.color}</span>
+                      </div>
+                    </div>
+                    
+                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold text-sm transition-colors duration-300">
+                      Detayları Gör
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <button 
+                onClick={() => onPageChange?.('cars')}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-2 mx-auto"
+              >
+                <span>Tüm Araçları Gör</span>
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Features Section */}
       <section className="py-20 bg-white">

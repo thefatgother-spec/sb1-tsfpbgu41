@@ -63,7 +63,7 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
-        return <HomePage onPageChange={setCurrentPage} />;
+        return <HomePage onPageChange={setCurrentPage} cars={cars} />;
       case 'cars':
         return <CarsPage cars={cars} />;
       case 'about':
