@@ -38,7 +38,7 @@ const CarCard: React.FC<CarCardProps> = ({ car, onClick }) => {
         {!car.isAvailable && (
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
             <span className="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold">
-              SATILDI
+              OPSİYONLANDI
             </span>
           </div>
         )}
