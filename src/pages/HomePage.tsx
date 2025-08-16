@@ -20,7 +20,7 @@ const HomePage = () => {
               Güvenilir Araç
               <span className="text-blue-300 block">Alım Satım</span>
             </h1>
-            <p className="bg-blue-300 hover:bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+            <p className="bg-gray-300 hover:bg-gray-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
               Geniş araç yelpazemiz ile hayalinizdeki aracı bulun. 
               Kaliteli hizmet ve güvenilir alım satım garantisi.
             </p>
