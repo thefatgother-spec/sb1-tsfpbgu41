@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { Car } from '../types/Car';
 import CarForm from '../components/CarForm';
-import { Plus, Edit, Trash2, Eye, EyeOff } from 'lucide-react';
+import { Plus, Edit, Trash2, Eye, EyeOff, LogOut } from 'lucide-react';
 
 interface AdminPageProps {
   cars: Car[];
   onAddCar: (data: any) => void;
   onUpdateCar: (id: string, data: any) => void;
   onDeleteCar: (id: string) => void;
+  onLogout: () => void;
 }
 
-const AdminPage: React.FC<AdminPageProps> = ({ cars, onAddCar, onUpdateCar, onDeleteCar }) => {
+const AdminPage: React.FC<AdminPageProps> = ({ cars, onAddCar, onUpdateCar, onDeleteCar, onLogout }) => {
   const [showForm, setShowForm] = useState(false);
   const [editingCar, setEditingCar] = useState<Car | null>(null);
 
@@ -51,6 +52,18 @@ const AdminPage: React.FC<AdminPageProps> = ({ cars, onAddCar, onUpdateCar, onDe
   if (showForm) {
     return (
       <div className="min-h-screen bg-gray-50 py-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
+          <div className="flex justify-between items-center">
+            <h1 className="text-2xl font-bold text-gray-900">Admin Panel</h1>
+            <button
+              onClick={onLogout}
+              className="flex items-center space-x-2 text-red-600 hover:text-red-700 font-medium"
+            >
+              <LogOut className="w-4 h-4" />
+              <span>Çıkış Yap</span>
+            </button>
+          </div>
+        </div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <CarForm
             onSubmit={handleSubmit}
@@ -73,13 +86,22 @@ const AdminPage: React.FC<AdminPageProps> = ({ cars, onAddCar, onUpdateCar, onDe
             <h1 className="text-4xl font-bold text-gray-900 mb-2">Admin Panel</h1>
             <p className="text-xl text-gray-600">Araç listesini yönetin</p>
           </div>
-          <button
-            onClick={() => setShowForm(true)}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center space-x-2"
-          >
-            <Plus className="w-5 h-5" />
-            <span>Yeni Araç Ekle</span>
-          </button>
+          <div className="flex items-center space-x-4">
+            <button
+              onClick={() => setShowForm(true)}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center space-x-2"
+            >
+              <Plus className="w-5 h-5" />
+              <span>Yeni Araç Ekle</span>
+            </button>
+            <button
+              onClick={onLogout}
+              className="flex items-center space-x-2 text-red-600 hover:text-red-700 font-medium px-4 py-2 border border-red-300 rounded-lg hover:bg-red-50 transition-colors"
+            >
+              <LogOut className="w-4 h-4" />
+              <span>Çıkış Yap</span>
+            </button>
+          </div>
         </div>
 
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">

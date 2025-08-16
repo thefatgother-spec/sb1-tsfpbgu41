@@ -5,11 +5,31 @@ import CarsPage from './pages/CarsPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import AdminPage from './pages/AdminPage';
+import AdminLogin from './components/AdminLogin';
 import { useCars } from './hooks/useCars';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
+  const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
   const { cars, loading, addCar, updateCar, deleteCar } = useCars();
+
+  // Check if current URL is admin panel
+  const isAdminPanel = window.location.pathname === '/admin-panel';
+
+  // Handle admin authentication
+  const handleAdminLogin = (id: string, password: string) => {
+    if (id === 'avsaroto' && password === 'avsaroto123') {
+      setIsAdminAuthenticated(true);
+      return true;
+    }
+    return false;
+  };
+
+  const handleAdminLogout = () => {
+    setIsAdminAuthenticated(false);
+    window.history.pushState({}, '', '/');
+    setCurrentPage('home');
+  };
 
   if (loading) {
     return (
@@ -22,25 +42,34 @@ function App() {
     );
   }
 
+  // Admin panel routing
+  if (isAdminPanel) {
+    if (!isAdminAuthenticated) {
+      return <AdminLogin onLogin={handleAdminLogin} />;
+    }
+    return (
+      <div className="min-h-screen bg-gray-50">
+        <AdminPage
+          cars={cars}
+          onAddCar={addCar}
+          onUpdateCar={updateCar}
+          onDeleteCar={deleteCar}
+          onLogout={handleAdminLogout}
+        />
+      </div>
+    );
+  }
+
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
-        return <HomePage />;
+        return <HomePage onPageChange={setCurrentPage} />;
       case 'cars':
         return <CarsPage cars={cars} />;
       case 'about':
         return <AboutPage />;
       case 'contact':
         return <ContactPage />;
-      case 'admin':
-        return (
-          <AdminPage
-            cars={cars}
-            onAddCar={addCar}
-            onUpdateCar={updateCar}
-            onDeleteCar={deleteCar}
-          />
-        );
       default:
         return <HomePage />;
     }

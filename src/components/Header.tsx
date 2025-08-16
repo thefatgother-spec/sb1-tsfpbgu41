@@ -13,8 +13,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
     { name: 'Ana Sayfa', id: 'home' },
     { name: 'Araçlar', id: 'cars' },
     { name: 'Hakkımızda', id: 'about' },
-    { name: 'İletişim', id: 'contact' },
-    { name: 'Admin', id: 'admin' }
+    { name: 'İletişim', id: 'contact' }
   ];
 
   return (
