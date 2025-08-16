@@ -5,7 +5,7 @@ const AboutPage = () => {
   const stats = [
     {
       icon: <Users className="w-8 h-8" />,
-      number: "1000+",
+      number: "10000+",
       label: "Mutlu Müşteri"
     },
     {
@@ -15,7 +15,7 @@ const AboutPage = () => {
     },
     {
       icon: <Car className="w-8 h-8" />,
-      number: "500+",
+      number: "5000+",
       label: "Satılan Araç"
     },
     {
