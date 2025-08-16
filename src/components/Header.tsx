@@ -43,8 +43,9 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex items-center cursor-pointer" onClick={() => onPageChange('home')}>
-              <div className="bg-blue-600 text-white p-2 rounded-lg mr-3">
-                <Car className="w-8 h-8" />
+              
+              +<div className="bg-blue-600 text-white p-2 rounded-lg mr-3">+
+                +<Car className="w-8 h-8" />+
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">AVSAR OTOMOTİV</h1>
