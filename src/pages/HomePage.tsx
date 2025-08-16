@@ -1,6 +1,43 @@
 import React from 'react';
 import { Car, Shield, Award, Users, ArrowRight } from 'lucide-react';
 
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 text-white">
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url("https://images.pexels.com/photos/33466003/pexels-photo-33466003.png?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop")'
+          }}
+        ></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              Güvenilir Araç
+              <span className="text-blue-300 block">Alım Satım</span>
+            </h1>
+            <p className="bg-gray-100 hover:bg-gray-200 text-black px-1 py-1 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+              Geniş araç yelpazemiz ile hayalinizdeki aracı bulun. 
+              Kaliteli hizmet ve güvenilir alım satım garantisi.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <button 
+                onClick={() => onPageChange?.('cars')}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Araçları İncele
+              </button>
+              <button 
+                onClick={() => onPageChange?.('contact')}
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+              >
+                İletişime Geç
+              </button>
+            </div>
+            
 interface HomePageProps {
   onPageChange?: (page: string) => void;
   cars?: any[];
