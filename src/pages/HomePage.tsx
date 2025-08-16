@@ -14,7 +14,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange }) => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url("https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop")'
+            backgroundImage: 'url("https://lh3.googleusercontent.com/p/AF1QipMBDOxI_EoqGS_cacdNtq6nKpTzlIKZso9VFQh_=s680-w680-h510-rw?auto=compress&cs=tinysrgb&w=680&h=510&fit=crop")'
           }}
         ></div>
         
