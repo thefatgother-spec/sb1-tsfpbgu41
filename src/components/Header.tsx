@@ -50,7 +50,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
                 <Car className="w-0 h-0" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">AVSAR OTOMOTİV</h1>
+                <h1 className="text-2xl font-bold text-gray-900">AVŞAR OTOMOTİV</h1>
                 <p className="text-sm text-gray-600">Güvenilir Araç Alım Satım</p>
               </div>
             </div>
