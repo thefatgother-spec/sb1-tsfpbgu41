@@ -43,7 +43,9 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex items-center cursor-pointer" onClick={() => onPageChange('home')}>
-              
+              <img 
+              src="https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                />
               +<div className="bg-blue-600 text-white p-2 rounded-lg mr-3">+
                 +<Car className="w-8 h-8" />+
               </div>
