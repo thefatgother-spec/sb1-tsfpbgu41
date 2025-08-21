@@ -70,7 +70,7 @@ const CarsPage: React.FC<CarsPageProps> = ({ cars }) => {
             </div>
             <button
               onClick={() => setShowFilters(!showFilters)}
-              className="flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+             className="flex items-center space-x-2 px-6 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors"
             >
               <Filter className="w-5 h-5" />
               <span>Filtrele</span>
@@ -82,7 +82,7 @@ const CarsPage: React.FC<CarsPageProps> = ({ cars }) => {
               <select
                 value={filters.brand}
                 onChange={(e) => setFilters(prev => ({ ...prev, brand: e.target.value }))}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+               className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
               >
                 <option value="">Tüm Markalar</option>
                 {availableBrands.map(brand => (
@@ -93,7 +93,7 @@ const CarsPage: React.FC<CarsPageProps> = ({ cars }) => {
               <select
                 value={filters.fuelType}
                 onChange={(e) => setFilters(prev => ({ ...prev, fuelType: e.target.value }))}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+               className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
               >
                 <option value="">Tüm Yakıt Tipleri</option>
                 <option value="Benzin">Benzin</option>
@@ -105,7 +105,7 @@ const CarsPage: React.FC<CarsPageProps> = ({ cars }) => {
               <select
                 value={filters.transmission}
                 onChange={(e) => setFilters(prev => ({ ...prev, transmission: e.target.value }))}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+               className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
               >
                 <option value="">Tüm Vites Tipleri</option>
                 <option value="Manuel">Manuel</option>
@@ -118,14 +118,14 @@ const CarsPage: React.FC<CarsPageProps> = ({ cars }) => {
                   placeholder="Min Fiyat"
                   value={filters.minPrice}
                   onChange={(e) => setFilters(prev => ({ ...prev, minPrice: e.target.value }))}
-                  className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                 className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                 />
                 <input
                   type="number"
                   placeholder="Max Fiyat"
                   value={filters.maxPrice}
                   onChange={(e) => setFilters(prev => ({ ...prev, maxPrice: e.target.value }))}
-                  className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                 className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                 />
               </div>
             </div>

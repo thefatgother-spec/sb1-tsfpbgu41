@@ -32,7 +32,7 @@ const CarCard: React.FC<CarCardProps> = ({ car, onClick }) => {
           alt={`${car.brand} ${car.model}`}
           className="w-full h-48 object-cover"
         />
-        <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+       <div className="absolute top-4 right-4 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
           {car.year}
         </div>
         {!car.isAvailable && (
@@ -49,7 +49,7 @@ const CarCard: React.FC<CarCardProps> = ({ car, onClick }) => {
           {car.brand} {car.model}
         </h3>
         
-        <div className="text-2xl font-bold text-blue-600 mb-4">
+       <div className="text-2xl font-bold text-slate-800 mb-4">
           {formatPrice(car.price)}
         </div>
         
@@ -81,7 +81,7 @@ const CarCard: React.FC<CarCardProps> = ({ car, onClick }) => {
           {car.description}
         </p>
         
-        <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition-colors duration-300">
+       <button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2 rounded-lg font-semibold transition-colors duration-300">
           Detayları Gör
         </button>
       </div>

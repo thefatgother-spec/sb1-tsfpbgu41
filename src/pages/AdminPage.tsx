@@ -89,14 +89,14 @@ const AdminPage: React.FC<AdminPageProps> = ({ cars, onAddCar, onUpdateCar, onDe
           <div className="flex items-center space-x-4">
             <button
               onClick={() => setShowForm(true)}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center space-x-2"
+              className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center space-x-2"
             >
               <Plus className="w-5 h-5" />
               <span>Yeni Araç Ekle</span>
             </button>
             <button
               onClick={onLogout}
-              className="flex items-center space-x-2 text-red-600 hover:text-red-700 font-medium px-4 py-2 border border-red-300 rounded-lg hover:bg-red-50 transition-colors"
+              className="flex items-center space-x-2 text-slate-600 hover:text-slate-700 font-medium px-4 py-2 border border-slate-300 rounded-lg hover:bg-slate-50 transition-colors"
             >
               <LogOut className="w-4 h-4" />
               <span>Çıkış Yap</span>
@@ -197,7 +197,7 @@ const AdminPage: React.FC<AdminPageProps> = ({ cars, onAddCar, onUpdateCar, onDe
               <p className="text-gray-600 mb-4">İlk aracınızı ekleyerek başlayın.</p>
               <button
                 onClick={() => setShowForm(true)}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300"
+                className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300"
               >
                 Araç Ekle
               </button>
