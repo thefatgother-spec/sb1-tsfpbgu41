@@ -37,9 +37,9 @@ interface HomePageProps {
 
 
       {/* Hero Section */}
-
-      
-        <div className="absolute inset-0 bg-black opacity-40"></div>
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 text-white">
+      <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white">
+        
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
  const HomePage: React.FC<HomePageProps> = ({ onPageChange, cars = [] }) => {
