@@ -18,7 +18,7 @@ function App() {
 
   // Handle admin authentication
   const handleAdminLogin = (id: string, password: string) => {
-    if (id === 'avsar' && password === 'avsar123') {
+   if (id === 'avsaroto' && password === 'avsaroto123') {
       setIsAdminAuthenticated(true);
       return true;
     }

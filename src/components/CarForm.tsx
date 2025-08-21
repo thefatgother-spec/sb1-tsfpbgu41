@@ -95,7 +95,7 @@ const CarForm: React.FC<CarFormProps> = ({ onSubmit, onCancel, initialData }) =>
               required
               value={formData.brand}
               onChange={(e) => setFormData(prev => ({ ...prev, brand: e.target.value }))}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
               placeholder="BMW, Mercedes, Audi..."
             />
           </div>
@@ -109,7 +109,7 @@ const CarForm: React.FC<CarFormProps> = ({ onSubmit, onCancel, initialData }) =>
               required
               value={formData.model}
               onChange={(e) => setFormData(prev => ({ ...prev, model: e.target.value }))}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
               placeholder="320i, C200, A4..."
             />
           </div>
@@ -211,8 +211,8 @@ const CarForm: React.FC<CarFormProps> = ({ onSubmit, onCancel, initialData }) =>
             rows={4}
             value={formData.description}
             onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-            placeholder="Araç hakkında detaylı bilgi..."
+           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
           />
         </div>
         
@@ -226,7 +226,7 @@ const CarForm: React.FC<CarFormProps> = ({ onSubmit, onCancel, initialData }) =>
                 type="url"
                 value={image}
                 onChange={(e) => updateImage(index, e.target.value)}
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+               className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                 placeholder="https://example.com/image.jpg"
               />
               {formData.images.length > 1 && (
@@ -243,7 +243,7 @@ const CarForm: React.FC<CarFormProps> = ({ onSubmit, onCancel, initialData }) =>
           <button
             type="button"
             onClick={addImageField}
-            className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium"
+           className="flex items-center space-x-2 text-emerald-600 hover:text-emerald-700 font-medium"
           >
             <Plus className="w-4 h-4" />
             <span>Fotoğraf Ekle</span>
@@ -260,7 +260,7 @@ const CarForm: React.FC<CarFormProps> = ({ onSubmit, onCancel, initialData }) =>
                 type="text"
                 value={feature}
                 onChange={(e) => updateFeature(index, e.target.value)}
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+               className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                 placeholder="Deri döşeme, Sunroof, Navigasyon..."
               />
               {formData.features.length > 1 && (
@@ -277,7 +277,7 @@ const CarForm: React.FC<CarFormProps> = ({ onSubmit, onCancel, initialData }) =>
           <button
             type="button"
             onClick={addFeatureField}
-            className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium"
+           className="flex items-center space-x-2 text-emerald-600 hover:text-emerald-700 font-medium"
           >
             <Plus className="w-4 h-4" />
             <span>Özellik Ekle</span>
@@ -287,7 +287,7 @@ const CarForm: React.FC<CarFormProps> = ({ onSubmit, onCancel, initialData }) =>
         <div className="flex space-x-4 pt-6">
           <button
             type="submit"
-            className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center"
+           className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center"
           >
             <Save className="w-5 h-5 mr-2" />
             Kaydet
