@@ -28,7 +28,7 @@ const CarDetail: React.FC<CarDetailProps> = ({ car, onBack }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <button
           onClick={onBack}
-          className="flex items-center space-x-2 text-emerald-600 hover:text-emerald-700 mb-6 font-medium"
+          className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 mb-6 font-medium"
         >
           <ArrowLeft className="w-5 h-5" />
           <span>Geri Dön</span>
@@ -72,7 +72,7 @@ const CarDetail: React.FC<CarDetailProps> = ({ car, onBack }) => {
               {car.brand} {car.model}
             </h1>
             
-            <div className="text-3xl font-bold text-slate-800 mb-6">
+            <div className="text-3xl font-bold text-blue-600 mb-6">
               {formatPrice(car.price)}
             </div>
 
@@ -138,10 +138,10 @@ const CarDetail: React.FC<CarDetailProps> = ({ car, onBack }) => {
             )}
 
             <div className="space-y-3">
-              <button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-lg font-semibold text-lg transition-colors duration-300">
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold text-lg transition-colors duration-300">
                 İletişime Geç
               </button>
-              <button className="w-full border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center">
+              <button className="w-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center">
                 <Phone className="w-5 h-5 mr-2" />
                 <a href="tel:+902125550123" className="flex items-center">
                   Hemen Ara

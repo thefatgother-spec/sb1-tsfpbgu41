@@ -19,7 +19,7 @@ const AdminLogin: React.FC<AdminLoginProps> = ({ onLogin }) => {
     // Simulate loading delay
     await new Promise(resolve => setTimeout(resolve, 500));
 
-   const success = onLogin(credentials.id, credentials.password);
+    const success = onLogin(credentials.id, credentials.password);
     
     if (!success) {
       setError('Kullanıcı ID veya şifre hatalı');
@@ -34,11 +34,11 @@ const AdminLogin: React.FC<AdminLoginProps> = ({ onLogin }) => {
   };
 
   return (
-   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 flex items-center justify-center px-4">
       <div className="max-w-md w-full">
         <div className="bg-white rounded-2xl shadow-2xl p-8">
           <div className="text-center mb-8">
-           <div className="bg-emerald-600 text-white p-3 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            <div className="bg-blue-600 text-white p-3 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
               <Lock className="w-8 h-8" />
             </div>
             <h1 className="text-2xl font-bold text-gray-900 mb-2">Admin Girişi</h1>
@@ -57,7 +57,7 @@ const AdminLogin: React.FC<AdminLoginProps> = ({ onLogin }) => {
                   required
                   value={credentials.id}
                   onChange={(e) => setCredentials(prev => ({ ...prev, id: e.target.value }))}
-                 className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                   placeholder="Kullanıcı ID'nizi girin"
                 />
               </div>
@@ -74,7 +74,7 @@ const AdminLogin: React.FC<AdminLoginProps> = ({ onLogin }) => {
                   required
                   value={credentials.password}
                   onChange={(e) => setCredentials(prev => ({ ...prev, password: e.target.value }))}
-                 className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors"
+                  className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                   placeholder="Şifrenizi girin"
                 />
                 <button
@@ -96,7 +96,7 @@ const AdminLogin: React.FC<AdminLoginProps> = ({ onLogin }) => {
             <button
               type="submit"
               disabled={isLoading}
-             className="w-full bg-emerald-600 hover:bg-emerald-700 disabled:bg-emerald-400 text-white py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center"
+              className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center"
             >
               {isLoading ? (
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
@@ -109,7 +109,7 @@ const AdminLogin: React.FC<AdminLoginProps> = ({ onLogin }) => {
           <div className="mt-6 text-center">
             <button
               onClick={handleGoBack}
-             className="text-emerald-600 hover:text-emerald-700 font-medium transition-colors"
+              className="text-blue-600 hover:text-blue-700 font-medium transition-colors"
             >
               ← Ana Sayfaya Dön
             </button>

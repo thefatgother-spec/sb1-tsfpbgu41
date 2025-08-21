@@ -19,7 +19,7 @@ const ContactPage = () => {
             
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-               <div className="bg-emerald-100 text-emerald-600 p-3 rounded-full">
+                <div className="bg-blue-100 text-blue-600 p-3 rounded-full">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
@@ -38,7 +38,7 @@ const ContactPage = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-               <div className="bg-emerald-100 text-emerald-600 p-3 rounded-full">
+                <div className="bg-blue-100 text-blue-600 p-3 rounded-full">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
@@ -49,7 +49,7 @@ const ContactPage = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-               <div className="bg-emerald-100 text-emerald-600 p-3 rounded-full">
+                <div className="bg-blue-100 text-blue-600 p-3 rounded-full">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
@@ -62,7 +62,7 @@ const ContactPage = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-               <div className="bg-emerald-100 text-emerald-600 p-3 rounded-full">
+                <div className="bg-blue-100 text-blue-600 p-3 rounded-full">
                   <Clock className="w-6 h-6" />
                 </div>
                 <div>
@@ -98,7 +98,7 @@ const ContactPage = () => {
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                     placeholder="Adınız ve soyadınız"
-                   />
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -108,7 +108,6 @@ const ContactPage = () => {
                     type="tel"
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors"
                     placeholder="Telefon numaranız"
                   />
                 </div>
@@ -121,7 +120,7 @@ const ContactPage = () => {
                 <input 
                   type="email"
                   required
-                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                   placeholder="E-posta adresiniz"
                 />
               </div>
@@ -130,7 +129,7 @@ const ContactPage = () => {
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Konu
                 </label>
-               <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors">
+                <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors">
                   <option>Araç Satın Alma</option>
                   <option>Araç Satma</option>
                   <option>Fiyat Bilgisi</option>
@@ -146,14 +145,14 @@ const ContactPage = () => {
                 <textarea 
                   rows={5}
                   required
-                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
                   placeholder="Mesajınızı yazın..."
                 ></textarea>
               </div>
 
               <button 
                 type="submit"
-               className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-4 rounded-lg font-semibold text-lg transition-colors duration-300 flex items-center justify-center"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-semibold text-lg transition-colors duration-300 flex items-center justify-center"
               >
                 <Send className="w-5 h-5 mr-2" />
                 Mesaj Gönder

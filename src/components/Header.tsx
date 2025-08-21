@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-slate-800 text-white py-2 px-4">
+      <div className="bg-blue-600 text-white py-2 px-4">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm">
           <div className="flex items-center space-x-4 mb-2 sm:mb-0">
             <div className="flex items-center space-x-1">
@@ -81,10 +81,10 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
                 <button
                   key={item.id}
                   onClick={() => onPageChange(item.id)}
-                  className={`text-left font-semibold transition-colors ${
+                  className={`font-medium transition-colors ${
                     currentPage === item.id
-                      ? 'text-emerald-600'
-                      : 'text-slate-700 hover:text-emerald-600'
+                      ? 'text-blue-600'
+                      : 'text-gray-700 hover:text-blue-600'
                   }`}
                 >
                   {item.name}
@@ -96,7 +96,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-               className="text-slate-700 hover:text-emerald-600 transition-colors"
+                className="text-gray-700 hover:text-blue-600 transition-colors"
               >
                 {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>

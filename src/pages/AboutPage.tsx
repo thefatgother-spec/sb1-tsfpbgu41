@@ -86,7 +86,7 @@ const AboutPage = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
           {stats.map((stat, index) => (
             <div key={index} className="text-center bg-white rounded-xl shadow-lg p-8">
-             <div className="bg-emerald-100 text-emerald-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 {stat.icon}
               </div>
               <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
@@ -101,7 +101,7 @@ const AboutPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-             <div className="bg-emerald-100 text-emerald-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Güvenilirlik</h3>
@@ -111,7 +111,7 @@ const AboutPage = () => {
             </div>
 
             <div className="text-center">
-             <div className="bg-emerald-100 text-emerald-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Award className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Kalite</h3>
@@ -121,7 +121,7 @@ const AboutPage = () => {
             </div>
 
             <div className="text-center">
-             <div className="bg-emerald-100 text-emerald-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Müşteri Odaklılık</h3>
