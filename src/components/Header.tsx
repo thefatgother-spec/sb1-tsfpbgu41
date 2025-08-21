@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Car, Phone, Mail } from 'lucide-react';
+import { Menu, X, Car, Phone, MapPin, MessageCircle } from 'lucide-react';
 
 interface HeaderProps {
   currentPage: string;
@@ -24,11 +24,22 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
           <div className="flex items-center space-x-4 mb-2 sm:mb-0">
             <div className="flex items-center space-x-1">
               <Phone className="w-4 h-4" />
-              <span>+90 212 555 0123</span>
+              <a href="tel:+902125550123" className="hover:underline">+90 212 555 0123</a>
             </div>
             <div className="flex items-center space-x-1">
-              <Mail className="w-4 h-4" />
-              <span>info@avsarotomotiv.net</span>
+              <MapPin className="w-4 h-4" />
+              <span>Şişli/İstanbul - Konum</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <MessageCircle className="w-4 h-4" />
+              <a 
+                href="https://wa.me/905325550123" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                WhatsApp
+              </a>
             </div>
           </div>
           <div className="text-sm">

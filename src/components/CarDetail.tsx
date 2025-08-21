@@ -143,7 +143,9 @@ const CarDetail: React.FC<CarDetailProps> = ({ car, onBack }) => {
               </button>
               <button className="w-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center">
                 <Phone className="w-5 h-5 mr-2" />
-                Hemen Ara
+                <a href="tel:+902125550123" className="flex items-center">
+                  Hemen Ara
+                </a>
               </button>
             </div>
           </div>
