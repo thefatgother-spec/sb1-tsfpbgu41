@@ -1,5 +1,4 @@
 import React from 'react';
-import { Car, Shield, Award, Users, ArrowRight } from 'lucide-react';
 import { Car, Shield, Award, Users, ArrowRight, Gauge, Fuel, Settings, Palette } from 'lucide-react';
 
 interface HomePageProps {
