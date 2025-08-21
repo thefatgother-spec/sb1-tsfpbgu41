@@ -37,9 +37,9 @@ interface HomePageProps {
 
 
       {/* Hero Section */}
-    
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 text-white">
       <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white">
-   /section>
+        </section>
         <div className="absolute inset-0 bg-black opacity-40"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
