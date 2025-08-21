@@ -3,7 +3,6 @@ import { Car, Shield, Award, Users, ArrowRight, Gauge, Fuel, Settings, Palette }
 
 interface HomePageProps {
   onPageChange?: (page: string) => void;
-  const HomePageProps: React.FC<HomePageProps> = ({ onPageChange, cars = [] }) => {
 
                     <div className="grid grid-cols-2 gap-2 mb-3 text-xs text-gray-600">
                       <div className="flex items-center space-x-1">
