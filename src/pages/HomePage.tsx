@@ -4,7 +4,7 @@ import { Car, Shield, Award, Users, ArrowRight, Gauge, Fuel, Settings, Palette }
 interface HomePageProps {
   onPageChange?: (page: string) => void;
 }
-@@ -66,15 +66,19 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange, cars = [] }) => {
+ const HomePage: React.FC<HomePageProps> = ({ onPageChange, cars = [] }) => {
 
                     <div className="grid grid-cols-2 gap-2 mb-3 text-xs text-gray-600">
                       <div className="flex items-center space-x-1">
@@ -24,7 +24,7 @@ interface HomePageProps {
                         <span>{car.color}</span>
                       </div>
                     </div>
-@@ -90,7 +94,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange, cars = [] }) => {
+ const HomePage: React.FC<HomePageProps> = ({ onPageChange, cars = [] }) => {
             <div className="text-center">
               <button 
                 onClick={() => onPageChange?.('cars')}
@@ -33,7 +33,7 @@ interface HomePageProps {
               >
                 <span>Tüm Araçları Gör</span>
                 <ArrowRight className="w-5 h-5" />
-@@ -103,7 +107,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange, cars = [] }) => {
+ const HomePage: React.FC<HomePageProps> = ({ onPageChange, cars = [] }) => {
 
 
       {/* Hero Section */}
@@ -42,7 +42,7 @@ interface HomePageProps {
         <div className="absolute inset-0 bg-black opacity-40"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-@@ -126,7 +130,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange, cars = [] }) => {
+ const HomePage: React.FC<HomePageProps> = ({ onPageChange, cars = [] }) => {
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <button 
                 onClick={() => onPageChange?.('cars')}
@@ -51,7 +51,7 @@ interface HomePageProps {
               >
                 Araçları İncele
               </button>
-@@ -140,7 +144,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange, cars = [] }) => {
+ const HomePage: React.FC<HomePageProps> = ({ onPageChange, cars = [] }) => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="flex items-center space-x-3">
@@ -60,7 +60,7 @@ interface HomePageProps {
                   <Shield className="w-6 h-6" />
                 </div>
                 <div>
-@@ -150,7 +154,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange, cars = [] }) => {
+ const HomePage: React.FC<HomePageProps> = ({ onPageChange, cars = [] }) => {
               </div>
 
               <div className="flex items-center space-x-3">
@@ -69,7 +69,7 @@ interface HomePageProps {
                   <Award className="w-6 h-6" />
                 </div>
                 <div>
-@@ -160,7 +164,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange, cars = [] }) => {
+ const HomePage: React.FC<HomePageProps> = ({ onPageChange, cars = [] }) => {
               </div>
 
               <div className="flex items-center space-x-3">
@@ -78,7 +78,7 @@ interface HomePageProps {
                   <Users className="w-6 h-6" />
                 </div>
                 <div>
-@@ -188,31 +192,31 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange, cars = [] }) => {
+ const HomePage: React.FC<HomePageProps> = ({ onPageChange, cars = [] }) => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
