@@ -28,7 +28,14 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
             </div>
             <div className="flex items-center space-x-1">
               <MapPin className="w-4 h-4" />
-              <span>Şişli/İstanbul - Konum</span>
+              <a 
+                href="https://maps.google.com/?q=Atatürk+Mahallesi+Otomotiv+Sanayi+Sitesi+Şişli+İstanbul" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Şişli/İstanbul - Konum
+              </a>
             </div>
             <div className="flex items-center space-x-1">
               <MessageCircle className="w-4 h-4" />
